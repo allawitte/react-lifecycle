@@ -10,6 +10,7 @@ constructor(props){
     );
   }
  shouldComponentUpdate(nextProps, nextState){
-  return (nextProps.isOpen && nextProps.items.length !== this.props.items);
+    console.log('nextProps.isOpen', nextProps.isOpen)
+  return ((nextProps.isOpen && nextProps.items.length !== this.props.items) || nextProps.isOpen !== this.props.isOpen);
  }
 }
